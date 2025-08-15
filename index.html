@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robust Plumbing</title>
+  <title>The bloom solutions</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./flex.css" />
+
+  <link rel="stylesheet" href="./particle.css">
   <link rel="icon" href="/resources/robust-logo-img-bg.webp" type="image/webp" />
 
 
@@ -15,17 +17,20 @@
 
   <script src="./script.js" defer></script>
   <script src="./animations.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="./particle.js" defer></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body class="home-page">
 
-  <header class="robust-header">
+  <header class="bloom-header">
 
-    <div class="robust-page-links flex flex-row  items-center">
-      <div class="robust-logo">
-        <a href="./index.html"><img src="./resources/robust-logo-img-bg.webp" alt=""></a>
+    <div class="bloom-page-links flex flex-row  items-center">
+      <div class="bloom-logo">
+        <a href="./index.html"><img src="./resources/logo-bg.png" alt=""></a>
       </div>
 
     </div>
@@ -40,43 +45,25 @@
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./index.html">Home</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
-              <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
-              <li><a class="section-link" href="./index.html#services">Services</a></li>
-              <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
-            </ul> -->
+
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./boilers.html">Boilers</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
-              <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
 
-            </ul> -->
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./portfolio.html">Portfolio</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./portfolio.html">Residential</a></li>
-              <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
-              <li><a class="section-link" href="./portfolio.html">Projects</a></li>
-            </ul> -->
+
           </li>
 
           <li class="slide-menu-nav-container">
             <a class="page-link" href="./contact.html">Contact</a>
             <div class="underline-nav"></div>
-            <!-- <ul class="sub-menu flex flex-col gap-50">
-              <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
-              <li><a class="section-link" href="./contact.html">Locations</a></li>
-            </ul> -->
+
           </li>
         </ul>
       </nav>
@@ -84,7 +71,7 @@
 
   </header>
 
-  <div id="welcomeModal" class="modal-overlay">
+  <!-- <div id="welcomeModal" class="modal-overlay">
     <div class="modal-content">
       <h3>Welcome</h3> <p> Quality Plumbing Starts Here.</p>
       
@@ -92,61 +79,42 @@
       <p>Just Pay $300 upfront</p>
       <button id="closeModalBtn" class="robust-button-primary">Close</button>
     </div>
-  </div>
+  </div>-->
 
   <main class="page-wrapper">
-    <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
+    <!-- <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
       <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
-    </div>
+    </div> -->
 
     <section class="hero">
-      <h1 class="visually-hidden">Robust Plumbing</h1>
-      <!-- <div class="hero-video">
-        <video autoplay muted playsinline>
-          <source src="./resources/videos/bg-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div> -->
+      <h1 class="visually-hidden">The bloom solutions</h1>
       <div class="hero-image">
-        <img src="./resources/main-wrapper.webp" alt="">
+        <div class="particle-network-animation">
+          <div class="glow glow-1"></div>
+          <div class="glow glow-2"></div>
+          <div class="glow glow-3"></div>
+        </div>
+
       </div>
 
 
 
-      <div class="overlay flex flex-col items-center justify-center animate-slide-right">
+      <div class="overlay flex flex-row flex-wrap items-center justify-evenly animate-slide-right">
+        <div class="hero-content flex flex-col items-start justify-start ">
+          <p class="hero-content-paragraph">| Your Complete IT Partner for Websites, Software, SEO & Digital Growth |</p>
+
+          <h1 class="hero-content-heading">NEED A WEBSITE?</h1>
+
+          <div class="hero-buttons"><button class="bloom-button-primary go-to-contact">GET A QUOTE</button></div>
+
+        </div>
         <div class="hero-content flex flex-col items-center justify-center gap-2">
-          <!-- <img class="hero-logo" src="./resources/robust-logo-bg-white.png" alt=""> -->
-          <!-- <p class="hero-description color-accent">Robust Plumbing</p> -->
 
-          <div class="footer-info-content-wrapper">
-            <div class="footer-logo-image">
-              <img src="./resources/robust-logo-img-bg.webp" alt="">
-            </div>
-            <div class="footer-info-content content-robust">
-              <h2 class="header-content-robust">ROBUST</h2>
-              <h2 class="header-content-robust">ROBUST</h2>
+          <h1 class="hero-content-heading">NEED A WEBSITE?</h1>
+          <!-- <p class="hero-heading">Experience <span class="color-accent">quality</span> service and <span
+              class="color-accent">trusted </span> plumbing solutions </p> -->
+          <div class="hero-buttons"><button class="bloom-button-primary go-to-contact">GET A QUOTE</button></div>
 
-            </div>
-            <div class="footer-info-content content-plumbing">
-              <h2>PLUMBING</h2>
-              <h2>PLUMBING</h2>
-            </div>
-          </div>
-
-          <!-- <p class="hero-heading">Where 
-            <span class="color-accent">Quality </span> Meets 
-            <span  class="color-accent">Trust</span>
-           </p> -->
-
-           <p class="hero-heading">Experience <span class="color-accent">quality</span> service and <span class="color-accent">trusted </span> plumbing solutions </p>
-<!--  </span> —That’s<span class="color-accent"> Robust !</span> -->
-          <p class="hero-description color-primary">SURREY | LANGLEY | VANCOUVER | BURNABY</p>
-
-          <div class="hero-buttons flex flex-row flex-wrap gap-1 justify-center items-center">
-            <button class="robust-button-primary go-to-contact">GET A QUOTE</button>
-            <button class="robust-button-secondary go-to-portfolio">PORTFOLIO</button>
-
-          </div>
         </div>
       </div>
 
@@ -161,14 +129,18 @@
 
       <div class="who-we-are-content  ">
         <div class="image-side">
-
-          <img src="./resources/who-we-are.webp" alt="">
+          <div class="particle-network-animation">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="glow glow-3"></div>
+          </div>
+          <!-- <img src="./resources/who-we-are.webp" alt=""> -->
         </div>
         <div class="text-side animate-slide-left flex flex-col gap-1 justify-center">
           <h1 class="animate-slide-right" data-delay="0.3s"><span class="color-accent">Who</span> We Are</h1>
           <div class="underline-left"></div>
           <p>
-            At <span class="color-primary big-text">Robust Plumbing</span>, we bring strength, reliability, and
+            At <span class="color-primary big-text">The bloom solutions</span>, we bring strength, reliability, and
             precision to every job we do. With a commitment to top-tier craftsmanship and customer satisfaction, we
             provide professional plumbing solutions built to last. Whether it’s residential, commercial, or emergency
             service, our team delivers results you can trust — every time.
@@ -188,13 +160,13 @@
             </div>
 
             <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
-           
+
               <span id="count2" class="counter-number"></span>
               <h5 class="counter-title">Emergencies</h5>
             </div>
 
             <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
-            
+
 
               <span id="count3" class="counter-number"></span>
               <h5 class="counter-title">Projects</h5>
@@ -217,39 +189,39 @@
 
         <div class="feature-circle-container">
           <div class="feature-border-circle"></div>
-       
-            <div class="feature-circle" id="featureCircle">
-              <div class="feature" data-title="Trust"
-                data-desc="You can count on us for dependable, high-quality plumbing backed by years of proven expertise. We prioritize reliability and integrity in every job we take on. Our team is committed to delivering consistent, professional results. We arrive on time, respect your space, and leave it cleaner than we found it. Our reputation is built on long-term customer relationships. Trust isn’t given—it’s earned, and we work to earn it every day.">
-                <div class="feature-inner"><i class="fas fa-shield-alt"></i>
-                
-               
-  </div>
+
+          <div class="feature-circle" id="featureCircle">
+            <div class="feature" data-title="Trust"
+              data-desc="You can count on us for dependable, high-quality plumbing backed by years of proven expertise. We prioritize reliability and integrity in every job we take on. Our team is committed to delivering consistent, professional results. We arrive on time, respect your space, and leave it cleaner than we found it. Our reputation is built on long-term customer relationships. Trust isn’t given—it’s earned, and we work to earn it every day.">
+              <div class="feature-inner"><i class="fas fa-shield-alt"></i>
+
 
               </div>
-
-              <div class="feature" data-title="Expertise"
-                data-desc="Our certified and highly trained plumbers bring years of hands-on experience to every project. We stay current with the latest plumbing codes, tools, and techniques to ensure safety and efficiency. From small repairs to major system overhauls, our team works with precision and attention to detail. Whether it’s residential, commercial, or industrial plumbing, we do it right the first time. Quality craftsmanship is our signature.">
-                <div class="feature-inner"><i class="fas fa-tools"></i></div>
-              </div>
-
-              <div class="feature" data-title="Transparency"
-                data-desc="We believe you deserve to know exactly what you’re paying for—before any work begins. That’s why we provide detailed, upfront estimates with no hidden fees or surprise charges. We walk you through the problem, explain the solution, and answer every question clearly. You’ll always have full visibility into the scope, timeline, and cost of your plumbing work. Clear communication and honest billing are the foundation of our service.">
-                <div class="feature-inner"><i class="fas fa-receipt"></i></div>
-              </div>
-
-              <div class="feature" data-title="Speed"
-                data-desc="When plumbing issues strike, time is critical. That’s why we respond quickly and resolve problems fast—without compromising quality. Whether it’s a burst pipe, blocked drain, or emergency repair, our team is equipped and ready 24/7. We understand how disruptive plumbing issues can be, and we act with urgency to minimize downtime. With us, help is just a call away—always.">
-                <div class="feature-inner"><i class="fas fa-bolt"></i></div>
-              </div>
-
 
             </div>
+
+            <div class="feature" data-title="Expertise"
+              data-desc="Our certified and highly trained plumbers bring years of hands-on experience to every project. We stay current with the latest plumbing codes, tools, and techniques to ensure safety and efficiency. From small repairs to major system overhauls, our team works with precision and attention to detail. Whether it’s residential, commercial, or industrial plumbing, we do it right the first time. Quality craftsmanship is our signature.">
+              <div class="feature-inner"><i class="fas fa-tools"></i></div>
+            </div>
+
+            <div class="feature" data-title="Transparency"
+              data-desc="We believe you deserve to know exactly what you’re paying for—before any work begins. That’s why we provide detailed, upfront estimates with no hidden fees or surprise charges. We walk you through the problem, explain the solution, and answer every question clearly. You’ll always have full visibility into the scope, timeline, and cost of your plumbing work. Clear communication and honest billing are the foundation of our service.">
+              <div class="feature-inner"><i class="fas fa-receipt"></i></div>
+            </div>
+
+            <div class="feature" data-title="Speed"
+              data-desc="When plumbing issues strike, time is critical. That’s why we respond quickly and resolve problems fast—without compromising quality. Whether it’s a burst pipe, blocked drain, or emergency repair, our team is equipped and ready 24/7. We understand how disruptive plumbing issues can be, and we act with urgency to minimize downtime. With us, help is just a call away—always.">
+              <div class="feature-inner"><i class="fas fa-bolt"></i></div>
+            </div>
+
+
+          </div>
 
 
         </div>
         <div class="feature-description" id="featureDesc">
-         
+
         </div>
       </div>
       <div class="join-us-wrapper shake-effect">
@@ -290,129 +262,150 @@
           </ul>
         </div>
 
-       <div class="slides">
+        <div class="slides">
 
-  <div class="slide" id="slide_1">
-    <div class="inner_content ">
-      <img src="./resources/services/emergency-service.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Emergency Plumbing Repairs</h1>
-        <p>
-          We provide fast, 24/7 emergency plumbing repairs to address urgent problems like burst pipes, major leaks, or flooding. Our expert team acts quickly to minimize damage to your property, restore water service, and ensure safety. You can rely on us any time, day or night, for immediate assistance.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_1">
+            <div class="inner_content ">
+              <img src="./resources/services/emergency-service.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Emergency Plumbing Repairs</h1>
+                <p>
+                  We provide fast, 24/7 emergency plumbing repairs to address urgent problems like burst pipes, major
+                  leaks, or flooding. Our expert team acts quickly to minimize damage to your property, restore water
+                  service, and ensure safety. You can rely on us any time, day or night, for immediate assistance.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_2">
-    <div class="inner_content ">
-      <img src="./resources/services/leak-detection-and-repair.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Leak Detection and Repair</h1>
-        <p>
-          Using advanced tools and techniques, we locate hidden and visible leaks that can cause significant water waste and structural damage over time. Our professionals carefully inspect your plumbing system, pinpoint the source of leaks, and perform reliable repairs to prevent future problems and save on costly water bills.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_2">
+            <div class="inner_content ">
+              <img src="./resources/services/leak-detection-and-repair.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Leak Detection and Repair</h1>
+                <p>
+                  Using advanced tools and techniques, we locate hidden and visible leaks that can cause significant
+                  water waste and structural damage over time. Our professionals carefully inspect your plumbing system,
+                  pinpoint the source of leaks, and perform reliable repairs to prevent future problems and save on
+                  costly water bills.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_3">
-    <div class="inner_content ">
-      <img src="./resources/services/drain-cleanage.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Drain Cleaning and Unclogging</h1>
-        <p>
-          We clear clogged sinks, toilets, showers, and main drains using effective methods such as snaking and hydro jetting. Our services help restore proper drainage, prevent backups, and maintain the health of your plumbing system, avoiding costly repairs and unpleasant odors in your home or business.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_3">
+            <div class="inner_content ">
+              <img src="./resources/services/drain-cleanage.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Drain Cleaning and Unclogging</h1>
+                <p>
+                  We clear clogged sinks, toilets, showers, and main drains using effective methods such as snaking and
+                  hydro jetting. Our services help restore proper drainage, prevent backups, and maintain the health of
+                  your plumbing system, avoiding costly repairs and unpleasant odors in your home or business.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_4">
-    <div class="inner_content ">
-      <img src="./resources/services/pipe-repair.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Pipe Repair and Replacement</h1>
-        <p>
-          Whether you have damaged, corroded, or broken pipes, we offer expert repair and replacement services to ensure reliable water flow. Our team assesses your plumbing to determine the best solution, helping to avoid leaks, water damage, and maintaining the safety and efficiency of your water supply system.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_4">
+            <div class="inner_content ">
+              <img src="./resources/services/pipe-repair.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Pipe Repair and Replacement</h1>
+                <p>
+                  Whether you have damaged, corroded, or broken pipes, we offer expert repair and replacement services
+                  to ensure reliable water flow. Our team assesses your plumbing to determine the best solution, helping
+                  to avoid leaks, water damage, and maintaining the safety and efficiency of your water supply system.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_5">
-    <div class="inner_content ">
-      <img src="./resources/services/water-installation.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Water Heater Installation and Repair</h1>
-        <p>
-          We install new water heaters or repair existing units to provide you with consistent, reliable hot water. From traditional tank models to energy-efficient tankless systems, our team ensures proper setup, maintenance, and timely repairs to keep your home or business comfortable all year round.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_5">
+            <div class="inner_content ">
+              <img src="./resources/services/water-installation.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Water Heater Installation and Repair</h1>
+                <p>
+                  We install new water heaters or repair existing units to provide you with consistent, reliable hot
+                  water. From traditional tank models to energy-efficient tankless systems, our team ensures proper
+                  setup, maintenance, and timely repairs to keep your home or business comfortable all year round.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_6">
-    <div class="inner_content ">
-      <img src="./resources/services/bathroom-plumbing.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Bathroom Plumbing Services</h1>
-        <p>
-          From repairing leaking faucets to installing new toilets, sinks, showers, and tubs, we provide comprehensive bathroom plumbing services. Our experts ensure your bathroom fixtures operate efficiently, improving functionality and enhancing the comfort and convenience of your space.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_6">
+            <div class="inner_content ">
+              <img src="./resources/services/bathroom-plumbing.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Bathroom Plumbing Services</h1>
+                <p>
+                  From repairing leaking faucets to installing new toilets, sinks, showers, and tubs, we provide
+                  comprehensive bathroom plumbing services. Our experts ensure your bathroom fixtures operate
+                  efficiently, improving functionality and enhancing the comfort and convenience of your space.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_7">
-    <div class="inner_content ">
-      <img src="./resources/services/kitchen-plumbing.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Kitchen Plumbing Services</h1>
-        <p>
-          We handle all your kitchen plumbing needs, including sink and faucet repairs, dishwasher installation, and garbage disposal servicing. Our skilled technicians work efficiently to keep your kitchen running smoothly, preventing leaks and ensuring all fixtures function properly for everyday convenience.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_7">
+            <div class="inner_content ">
+              <img src="./resources/services/kitchen-plumbing.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Kitchen Plumbing Services</h1>
+                <p>
+                  We handle all your kitchen plumbing needs, including sink and faucet repairs, dishwasher installation,
+                  and garbage disposal servicing. Our skilled technicians work efficiently to keep your kitchen running
+                  smoothly, preventing leaks and ensuring all fixtures function properly for everyday convenience.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_8">
-    <div class="inner_content ">
-      <img src="./resources/services/sewer-line.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Sewer Line Repair and Replacement</h1>
-        <p>
-          We address serious sewer issues such as backups, broken pipes, and root intrusion using both trenchless and traditional repair methods. Our services restore proper sewer flow, prevent contamination, and protect your property’s health and value with minimal disruption.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_8">
+            <div class="inner_content ">
+              <img src="./resources/services/sewer-line.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Sewer Line Repair and Replacement</h1>
+                <p>
+                  We address serious sewer issues such as backups, broken pipes, and root intrusion using both
+                  trenchless and traditional repair methods. Our services restore proper sewer flow, prevent
+                  contamination, and protect your property’s health and value with minimal disruption.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_9">
-    <div class="inner_content ">
-      <img src="./resources/services/fixture-installation.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Fixture Installation</h1>
-        <p>
-          Whether you’re renovating or upgrading, we professionally install plumbing fixtures such as toilets, faucets, sinks, and water filtration systems. Our precise installations ensure long-lasting performance and help improve the efficiency and aesthetics of your plumbing setup.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_9">
+            <div class="inner_content ">
+              <img src="./resources/services/fixture-installation.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Fixture Installation</h1>
+                <p>
+                  Whether you’re renovating or upgrading, we professionally install plumbing fixtures such as toilets,
+                  faucets, sinks, and water filtration systems. Our precise installations ensure long-lasting
+                  performance and help improve the efficiency and aesthetics of your plumbing setup.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <div class="slide" id="slide_10">
-    <div class="inner_content ">
-      <img src="./resources/services/sump-pump.webp" alt="">
-      <div class="inner_content_data flex flex-col gap-1">
-        <h1 class="visually-hidden">Sump Pump Installation and Repair</h1>
-        <p>
-          We install and maintain sump pumps to protect your basement from flooding and manage groundwater effectively. Our team ensures your sump pump is reliable and ready to activate when needed, safeguarding your property from water damage and costly repairs.
-        </p>
-      </div>
-    </div>
-  </div>
+          <div class="slide" id="slide_10">
+            <div class="inner_content ">
+              <img src="./resources/services/sump-pump.webp" alt="">
+              <div class="inner_content_data flex flex-col gap-1">
+                <h1 class="visually-hidden">Sump Pump Installation and Repair</h1>
+                <p>
+                  We install and maintain sump pumps to protect your basement from flooding and manage groundwater
+                  effectively. Our team ensures your sump pump is reliable and ready to activate when needed,
+                  safeguarding your property from water damage and costly repairs.
+                </p>
+              </div>
+            </div>
+          </div>
 
-</div>
+        </div>
 
       </div>
 
@@ -443,7 +436,7 @@
 
   </main>
 
-  <div class="floating-social">
+  <!-- <div class="floating-social">
     <button id="toggleSocial" aria-label="Toggle Social Links">
       <i class="fas fa-share-alt"></i>
     </button>
@@ -462,9 +455,9 @@
         <i class="fab fa-whatsapp"></i>
       </a>
     </nav>
-  </div>
+  </div> -->
 
-  <footer class="footer-section flex flex-col md:flex-row ">
+  <!-- <footer class="footer-section flex flex-col md:flex-row ">
 
     <section class="footer-info flex flex-col items-center justify-center">
       <h4 class="visually-hidden">Logo and description</h4>
@@ -507,9 +500,9 @@
   </div>
 </section>
 
-  </footer>
-  <div class="footer-copyright flex flex-row justify-center" id="footerCopyright">
-</div>
+  </footer> -->
+  <!-- <div class="footer-copyright flex flex-row justify-center" id="footerCopyright">
+</div> -->
 
 </body>
 

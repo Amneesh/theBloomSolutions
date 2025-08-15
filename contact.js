@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactFormSuccessHeading = document.querySelector("#contactFormSuccessHeading");
 
     const to = "info@robustplumbing.ca";
-    const subject = `Robust Plumbing website inquiry from ${name}`;
+    const subject = `The bloom solutions website inquiry from ${name}`;
     const html = `
       <h2>New Inquiry from Website</h2>
       <p><strong>Name:</strong> ${name}</p>

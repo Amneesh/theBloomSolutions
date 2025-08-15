@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Castoro+Titling&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,45 +8,46 @@
 
 :root {
   scroll-behavior: smooth;
-  --primary-black-color: #001a35;
-  --primary-white-color: rgb(255, 255, 255);
-  --secondary-black-color: rgba(0, 0, 0, 0.49);
-  /* --color-primary: #1976d2;
-  --color-primary-light: #5e9fdf;
-  --color-primary-dark: #145ea8; */
 
-  --color-primary: #0000FF;
-  --color-primary-light:  #ADD8E6;
-  --color-primary-dark: #00008B;
-  
-  --color-navy-dark:  #001123;
-  --color-navy: #002347;
+  /* Primary Color */
+  --color-primary-light: #A8D0CE;  /* light shade of #78B9B5 */
+  --color-primary:       #78B9B5;  /* normal */
+  --color-primary-dark:  #4F7F7B;  /* dark shade */
 
-  --color-secondary: #e5eef7;
-  --color-secondary-light: #ccddef;
-  --color-accent:#FF0000;
-   --color-accent-light:#FFCCCB;
-  --color-accent-dark:#8B0000;
+  /* Secondary Color */
+  --color-secondary-light: #59B0B8;  /* light shade of #0F828C */
+  --color-secondary:       #0F828C;  /* normal */
+  --color-secondary-dark:  #0A5A61;  /* dark shade */
 
-  /* --color-accent: #f5a623; */
+  /* Tertiary Color */
+  --color-tertiary-light: #4071A1;  /* light shade of #065084 */
+  --color-tertiary:       #065084;  /* normal */
+  --color-tertiary-dark:  #04305A;  /* dark shade */
 
-  
-  /* --color-accent-light: #f8c065; */
- 
-  /* --color-accent-dark: #c4841c; */
+  /* Quaternary Color */
+  --color-quaternary-light: #7042A2;  /* light shade of #320A6B */
+  --color-quaternary:       #320A6B;  /* normal */
+  --color-quaternary-dark:  #1A0536;  /* dark shade */
 
-  /* Background & Surface */
+  /* Accent Color */
+  --color-accent-light: #8CE3E0;  /* light aqua-cyan for highlights */
+  --color-accent:       #00B3B0;  /* normal accent */
+  --color-accent-dark:  #007C78;  /* dark accent for hover or focus */
+
+  /* Backgrounds and surfaces */
   --color-background: #f4f4f4;
-  /* Dark base */
   --color-surface: #f0f0f0;
 
-  /* Text Colors */
+  /* Text colors */
   --color-text: #002347;
-  --color-text-muted: #cccccc;
-  --color-heading: #f5a623;
+  --color-text-muted: #888888;
+  --color-heading: var(--color-secondary-dark);
 
-  /* Borders and Shadows */
-  --color-border: #ff00ff33;
+  /* Borders and shadows */
+  --color-border: #0F828C33; /* semi-transparent main aqua */
+
+    --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
 }
 
 .visually-hidden {
@@ -60,52 +60,63 @@
   width: 1px;
 }
 
-html,
-body,
-main {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-
-  background-color: var(--color-background);
-  color: var(--color-navy);
-  padding: 0;
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Hide vertical scroll */
 }
 
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.page-wrapper > section {
+  flex: 0 0 100%;
+  height: 100vh !important;
+  scroll-snap-align: start;
+}
 body.loaded {
   visibility: visible;
   opacity: 1;
 }
-section,
+
 footer {
-  position: relative;
+  display: none !important;
+  bottom: 0;
   background-color: var(--color-background);
   z-index: 10;
 }
 h1 {
   text-transform: uppercase;
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-size: clamp(30px, 4vw, 48px);
 }
 
 h2 {
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   text-transform: uppercase;
   font-size: clamp(28px, 4vw, 36px);
 }
 
 h3 {
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-size: clamp(24px, 4vw, 30px);
 }
 
 h4 {
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-size: clamp(20px, 4vw, 24px);
 }
 
 h5 {
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-size: clamp(16px, 4vw, 18px);
 }
 
@@ -123,25 +134,25 @@ body {
 }
 
 p {
-  font-family: "Assistant", sans-serif;
+  font-family: var(--font-secondary);
 
   font-size: clamp(16px, 4vw, 18px);
   font-weight: 300;
 }
 
 li {
-  font-family: "Assistant", sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 300;
 }
 
 a {
-  font-family: "Assistant", sans-serif;
+  font-family: var(--font-secondary);
 
   font-size: clamp(16px, 4vw, 18px);
 }
 
 button {
-  font-family: "Assistant", sans-serif;
+  font-family: var(--font-secondary);
 
   font-size: clamp(14px, 4vw, 16px);
 }
@@ -153,7 +164,7 @@ img {
 }
 
 i {
-  font-family: "Assistant", sans-serif;
+  font-family: var(--font-secondary);
   font-size: clamp(18px, 4vw, 24px);
 }
 
@@ -172,36 +183,52 @@ i {
   color: var(--color-primary-light);
 }
 
-.robust-button-primary {
-  padding: 17px 40px;
 
+.bloom-button-primary {
   cursor: pointer;
-  border: 0;
-  background: var(--color-accent-dark);
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-
-  transition: all 0.5s ease;
-  color: var(--color-background);
-  border: 1px solid var(--color-accent-dark);
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: var(--color-accent-light);
+  border: 2px solid var(--color-accent-light);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
 }
 
-.robust-button-primary:hover {
-  letter-spacing: 1px;
-  background-color: var(--color-primary-dark);
-  color: var(--color-background);
-  border: 1px solid var(--color-primary-dark);
+.bloom-button-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: var(--color-accent-light);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.robust-button-primary:active {
-   letter-spacing: 1px;
-  background-color: var(--color-primary-dark);
-  color: var(--color-background);
-  border: 1px solid var(--color-primary-dark);
-  transform: translateY(10px);
-  transition: 100ms;
+.bloom-button-primary:hover::before {
+  scale: 3;
 }
+
+.bloom-button-primary:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px var(--color-accent-light);
+}
+
+.bloom-button-primary:active {
+  scale: 1;
+}
+
+
+
+
 
 .robust-button-secondary {
   max-width: 250px;
@@ -283,8 +310,40 @@ i {
 
 /* modal */
 /* headxder */
-.robust-header {
-  background-color: var(--color-secondary);
+
+
+
+/* .promo-banner {
+  background: var(--color-accent-dark);
+  color:var(--primary-white-color);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+} */
+
+/* .promo-track {
+  display: inline-block;
+  padding-left: 100%;
+  /* animation: scrollText 15s linear infinite; */
+
+  /* i{
+    font-size: clamp(16px, 4vw, 18px);
+  }
+} */
+/* 
+@keyframes scrollText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+} */
+ /* #promo-track.scrolling {
+    animation: scrollText 50s linear infinite;
+  } */
+/* When active, expand the dropdown */
+.bloom-header {
+  background-color: var(--primary-black-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -298,53 +357,15 @@ i {
 box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 
 
-.page-wrapper, .boilers-main-wrapper, .contact-main-wrapper, .portfolio-main-wrapper{
-  margin-top: 80px;
-}
-.promo-banner {
-  background: var(--color-accent-dark);
-  color:var(--primary-white-color);
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 8px 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.promo-track {
-  display: inline-block;
-  padding-left: 100%;
-  /* animation: scrollText 15s linear infinite; */
-
-  i{
-    font-size: clamp(16px, 4vw, 18px);
-  }
-}
-
-@keyframes scrollText {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); } /* move half because we duplicated */
-}
- #promo-track.scrolling {
-    animation: scrollText 50s linear infinite;
-  }
-/* When active, expand the dropdown */
-.page-links.active {
-  max-height: 300px;  /* adjust as needed */
-  opacity: 1;
-  padding: 1rem;
-}
-
-.robust-logo{
-  width: 50px;
+.bloom-logo{
+  width: 100px;
   height: auto;
 
   
 }
 
 
-.robust-page-links {
+.bloom-page-links {
   position: relative;
   display: flex;
   align-items: center;
@@ -353,7 +374,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 
 
 /* Logo cursor pointer */
-.robust-logo {
+.bloom-logo {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -361,14 +382,14 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 }
 
 /* Rotate logo when active */
-.robust-logo:hover {
+.bloom-logo:hover {
   transform: rotate(270deg);
   transition: all 0.5s ease-in-out;
 }
 
 
 
-/* Hamburger Base Styles */
+/* Hamburger ICON */
 
 .hamburger {
   width: 35px;
@@ -395,7 +416,6 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
   transition: all 0.4s ease;
 }
 
-/* Transform to X */
 .hamburger.open span:nth-child(1) {
   transform: translateY(13px) rotate(45deg);
 }
@@ -407,46 +427,40 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;}
 .hamburger.open span:nth-child(3) {
   transform: translateY(-13px) rotate(-45deg);
 }
+/* Hamburger ICON */
+
 
 /* Slide Menu */
 #slide-menu {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100vh;
 
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
   visibility: hidden;
-  transform: translateX(100%);
+  transform: translateY(100%);
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
   padding: 2rem 2rem 7rem 2rem;
-background-color: #002347;
-background-image: url('./resources/plumber-header.webp');
-background-size: 30em;
-    background-position: 8rem bottom ;
-    background-repeat: no-repeat;
+background-color: var(--color-accent-dark);
+
 
 
 }
 
 @media only screen and (min-width: 600px) {
-  #slide-menu {
-    width: 50%;
-    background-size: 30em;
-    background-position: 30rem 100%;
-    background-repeat: no-repeat;
 
-  }
 }
 
 #slide-menu.active {
-  transform: translateX(0);
+  transform: translateY(10%);
   visibility: visible;
-  /* <- now shows smoothly */
 }
 
 #slide-menu ul {
@@ -467,7 +481,7 @@ background-size: 30em;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-size: clamp(28px, 4vw, 45px);
 }
 
@@ -521,62 +535,26 @@ background-size: 30em;
   }
 }
 
-/* page wrapper main */
+
 /* header end */
 
-.hero {
-  display: block;
+/* page wrapper main */
+.hero{
   position: relative;
-
-  height: auto;
-  width: 100%;
-  background: url("./resources/who-we-are.webp");
-  color: var(--color-text);
-  background-size: cover;
-  background-position: left;
-  background-attachment: fixed;
 }
 
-.hero-video {
-  position: relative;
-  width: 100%;
-  height: 35vh;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.hero-video video {
-  position: absolute; /* change from fixed to absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
-  pointer-events: none;
-}
-
-
-
-@media only screen and (min-width: 768px) {
-
-}
 
 .overlay {
-  text-align: center;
-  background-color: var(--color-background);
+  position: absolute;
+ 
+  background-color: transparent;
   height: 100%;
   width: 100%;
-  
-  
-
-  /* visibility: hidden; */
   transition: opacity 1s ease, transform 1s ease;
   z-index: 2;
-  /* opacity: 0; */
   overflow: hidden;
   left: 0;
+  top: 0;
   transform: translateX(-100%);
 
 }
@@ -588,50 +566,31 @@ background-size: 30em;
 }
 
 .hero-content {
-  width: 100%;
+color: var(--color-accent-light);
   padding: 2rem 2rem 2rem 2rem;
-  color: var(--color-text);
 
- 
+
+}
+.hero-content-heading{
+     max-width: 500px;
+      font-size: clamp(50px, 6vw, 100px);
+
+}
+.hero-content-paragraph{
+  color: var(--color-primary-light);
+
+}
+.hero-logo{
+  max-width: 300px;
+
 }
 .hero-image{
   position: relative;
-  /* img{
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    object-position: top;
-  } */
 }
 
-@media only screen and (min-width: 768px) {
-  .hero {
-    display: flex;
-    flex-flow: row-reverse;
-  }
-
-  .hero-video {
-    width: 50%;
-    height: 100vh;
-  }
- .hero-image{
-width: 50%;
-  }
-   
-.hero-image img{
- display: none;
-}
-  .overlay {
-    padding: 0rem 2rem;
-    width: 50%;
-       min-height: 100vh;
-       height: auto;
-
-  }
 
 
 
-
-}
 
 .hero-btn:hover {
   background-color: var(--color-background);
@@ -640,7 +599,7 @@ width: 50%;
 
 .hero-heading {
   max-width: 1100px;
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   text-align: center;
   padding: 1rem 1rem;
   text-transform: lowercase !important;
@@ -684,8 +643,8 @@ width: 50%;
   min-height: 100vh;
   height: auto;
   position: relative;
-  background-color: var(--color-secondary);
-  background: url("./resources/who-we-are.webp");
+  background-color: transparent;
+  /* background: url("./resources/who-we-are.webp"); */
   color: var(--color-text);
   background-size: cover;
   background-position: left;
@@ -717,7 +676,7 @@ width: 50%;
 }
 
 .big-text {
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   text-transform: uppercase;
   font-size: clamp(24px, 4vw, 30px);
 }
@@ -787,7 +746,7 @@ width: 50%;
 
 .counter-number {
   min-width: 150px;
-  font-family: "Castoro Titling", serif;
+  font-family: var(--font-primary);
   font-weight: 100;
   font-style: normal;
   color: var(--color-accent);
@@ -1340,7 +1299,7 @@ h1{
   input {
     width: 100%;
     padding: 1rem 4rem 1rem 1rem;
-    font-family: "Assistant", sans-serif;
+    font-family: var(--font-secondary);
 
     font-size: clamp(16px, 4vw, 18px);
     font-weight: 300;
