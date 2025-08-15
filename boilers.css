@@ -1,0 +1,279 @@
+.events-page {
+  background: url("./resources/event-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+}
+
+.boiler-main-wrapper {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.boiler-text-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.boiler-image-wrapper {
+  max-width: 500px;
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.boiler-services-wrapper {
+  width: 100%;
+max-width: 1400px;
+}
+
+.boiler-service-card {
+  padding: 1rem;
+  max-width: 500px;
+  background-color: var(--primary-white-color);
+}
+
+/* services */
+.boiler-services-container {
+  background-color: var(--color-secondary);
+  padding: 3rem 1rem;
+}
+
+.boiler-services-image {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    margin: 0 auto;
+    max-width: 400px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+  }
+}
+
+.boiler-services-content{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .side-left{
+  align-self: flex-start;
+  }
+  .side-right{
+   align-self: flex-end;
+  }
+}
+@media only screen and (min-width:768px){
+ .boiler-services-image {
+  width: 40%;
+}
+  .boiler-services-content{
+  width: 60%;
+}
+}
+/* services */
+
+/* BOILER-CATALOG */
+.boiler-catalog{
+  padding: 3rem 1rem;
+  position: relative;
+}
+.boiler-catalog::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 60%;
+  background: var(--color-secondary);
+
+
+  pointer-events: none;
+}
+.boiler-catalog-card{
+  max-width: 300px;
+  min-width: 150px;
+height: 550px;
+  padding: 1rem;
+  background-color: var(--color-navy-dark);
+  border: 1px solid var(--color-navy-dark);
+  color:var(--primary-white-color)
+}
+
+.boiler-catalog-body{
+
+}
+
+
+.boiler-catalog-card-image{
+overflow: hidden;
+
+  img{
+    transition: all 1s ease-in-out;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+.boiler-catalog-card-image:hover{
+  
+  img{
+    transform: scale(1.3);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+
+.boiler-catalog-description{
+  border-top: 1px solid var(--color-primary-light);
+  border-bottom: 1px solid var(--color-primary-light);
+  padding: 10px 0rem 10px 0rem;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+.boiler-catalog-footer{
+
+  text-align: right;
+}
+/* BOILER CATALOG */
+
+
+
+#main-why-us-image {
+  width: 100%;
+  border: 4px solid var(--primary-black-color);
+  background-color: #eee;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  /* starts transparent until loaded */
+
+}
+
+
+
+#servicesCarousel {
+  width: 90%;
+  max-width: 330px;
+  margin:0rem 5rem;
+
+  position: relative;
+}
+
+
+
+
+
+.service-details {
+  padding: 2rem 0rem 2rem 0rem;
+  width: 100%;
+}
+
+.service-filter-button button{
+  flex-grow: 1;
+}
+
+.service-filter-button button:hover {
+  background-color: var(--color-accent-light) !important;
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.service-filter-button button.active {
+  background-color: var(--color-accent-dark) !important;
+  color: #fff;
+}
+
+.boiler-carousel-buttons{
+ position: relative;
+    width: 300px;
+     height: 100px;
+}
+@media only screen and (min-width:768px){
+  .boiler-carousel-buttons{
+    height: auto;
+}
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  color: var(--color-navy) !important;
+  opacity: 1;
+}
+
+
+/* boiler tpyes */
+.boiler-types-section{
+  height: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: var(--color-secondary);
+}
+.boiler-types-text{
+padding: 2rem;
+width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+  ul{
+    list-style:upper-roman;
+    font-size: clamp(18px, 4vw, 20px);
+    padding: 0rem 0rem 0rem 1rem;
+   li{
+    margin-bottom: 1rem;
+   }
+  }
+}
+.boiler-types-text > div {
+  display: none;
+}
+
+.boiler-types-text > div.active {
+  display: flex;
+}
+
+/* Make images grayscale by default */
+
+
+.boiler-types-images{
+background-color: var(--primary-white-color);
+padding:1rem 1rem;
+width: 100%;
+margin: 0 auto;
+
+}
+.boiler-types-images img {
+  cursor: pointer;
+  filter: grayscale(100%) brightness(0.3);
+  transition: filter 0.3s ease;
+width: 100%;
+height: 100%;
+margin: 0 auto;
+overflow: hidden;
+  box-shadow: none;
+  aspect-ratio: 3/1;
+height: 250px;
+  object-fit: cover;
+  object-position: center;
+   transition: all 1s ease-in-out;
+}
+.boiler-types-images img:hover {
+  filter: none;
+
+}
+/* Color the active image */
+.boiler-types-images img.active {
+  filter: none;
+z-index: 10;
+
+  transition: all 1s ease-in;
+}
+@media only screen and (min-width:768px){
+.boiler-types-images{
+display: grid;
+grid-template-columns: 1fr 1fr;
+max-width: 800px;
+}
+}

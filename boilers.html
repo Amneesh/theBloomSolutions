@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robust Plumbing</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/resources/robust-logo-img-bg.webp" type="image/webp" />
+  <link rel="stylesheet" href="./flex.css" />
+  <link rel="stylesheet" href="./boilers.css" />
+  <script src="./animations.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="./script.js" defer></script>
+  <script src="./boilers.js" defer></script>
+
+</head>
+
+<body class="event-page">
+  <header class="robust-header">
+
+    <div class="robust-page-links flex flex-row  items-center">
+      <div class="robust-logo">
+        <a href="./index.html"><img src="./resources/robust-logo-img-bg.webp" alt=""></a>
+      </div>
+
+    </div>
+    <div class="header">
+      <button id="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="slide-menu" class="nav-links">
+        <ul class="flex flex-col gap-3">
+          <li class="slide-menu-nav-container">
+            <a class="page-link" href="./index.html">Home</a>
+            <div class="underline-nav"></div>
+            <!-- <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./index.html#whoWeAre">About Us</a></li>
+              <li><a class="section-link" href="./index.html#features">FEATURES</a></li>
+              <li><a class="section-link" href="./index.html#services">Services</a></li>
+              <li><a class="section-link" href="./index.html#googleReviews">REVIEWS</a></li>
+            </ul> -->
+          </li>
+
+          <li class="slide-menu-nav-container">
+            <a class="page-link" href="./boilers.html">Boilers</a>
+            <div class="underline-nav"></div>
+            <!-- <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./boilers.html#boilersSection">Boilers</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerServices">Services</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerCatalog">Catalog</a></li>
+              <li><a class="section-link" href="./boilers.html#boilerTypes">Types</a></li>
+
+            </ul> -->
+          </li>
+
+          <li class="slide-menu-nav-container">
+            <a class="page-link" href="./portfolio.html">Portfolio</a>
+            <div class="underline-nav"></div>
+            <!-- <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./portfolio.html">Residential</a></li>
+              <li><a class="section-link" href="./portfolio.html">Commercial</a></li>
+              <li><a class="section-link" href="./portfolio.html">Projects</a></li>
+            </ul> -->
+          </li>
+
+          <li class="slide-menu-nav-container">
+            <a class="page-link" href="./contact.html">Contact</a>
+            <div class="underline-nav"></div>
+            <!-- <ul class="sub-menu flex flex-col gap-50">
+              <li><a class="section-link" href="./contact.html">Get a Quote</a></li>
+              <li><a class="section-link" href="./contact.html">Locations</a></li>
+            </ul> -->
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+
+  <main class="boilers-main-wrapper">
+
+    <div class="promo-banner flex flex-row flex-wrap items-center justify-center gap-1 go-to-contact">
+      <p class="promo-track flex flex-row gap-1" id="promo-track"></p>
+    </div>
+    <section class="boiler-main-container" id="boilersSection">
+
+      <h1 class="visually-hidden">Boilers Services by Robust Plumbing</h1>
+      <div class="boiler-main-wrapper flex flex-row flex-wrap  gap-1 ">
+        <div class="boiler-text-wrapper flex flex-col gap-2 justify-center items-start ">
+          <div class="boiler-text-heading">
+            <h1>
+              <span class="color-accent">Hot water tanks</span> by Robust !
+            </h1>
+            <div class="underline-left"></div>
+          </div>
+          <p>At Robust Plumbing, we understand how essential a reliable boiler system is for your home or business.
+            Whether you need a new boiler installation, routine maintenance, or emergency repairs, our expert
+            technicians are here to provide fast, efficient, and affordable boiler services you can count on.</p>
+          <button class="robust-button-primary">GET A QUOTE</button>
+        </div>
+        <div class="boiler-image-wrapper animate-slide-left"><img src="./resources/robust_van.webp" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="boiler-services-container flex flex-col items-center justify-center gap-2" id="boilerServices">
+      <h1><span class="color-accent">Boiler Services</span> we offer</h1>
+      <div class="boiler-services-wrapper flex flex-col md:flex-row gap-1 items-center justify-evenly">
+        <div class="boiler-services-image">
+          <img src="./resources/boiler-repair.webp" alt="">
+        </div>
+        <div class="boiler-services-content flex flex-col gap-1">
+
+          <div class="boiler-service-card side-left">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <h4>Boiler Installation</h4>
+            </div>
+            <p>Expert installation of combi, system, and conventional boilers for safe, efficient heating.</p>
+          </div>
+
+          <div class="boiler-service-card side-right">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-wrench"></i>
+              <h4>Boiler Repair</h4>
+            </div>
+            <p>Fast, reliable repairs to restore your boiler’s performance and prevent downtime.</p>
+          </div>
+
+          <div class="boiler-service-card side-left">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-gear"></i>
+              <h4>Boiler Maintenance</h4>
+            </div>
+            <p>Comprehensive inspections and tune-ups to keep your boiler running efficiently year-round.</p>
+          </div>
+
+          <div class="boiler-service-card side-right">
+            <div class="boiler-service-card-header flex flex-row gap-1 items-center">
+              <i class="fa-solid fa-recycle"></i>
+              <h4>Boiler Replacement</h4>
+            </div>
+            <p>Hassle-free replacement with modern, energy-efficient boiler systems.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="boiler-catalog flex flex-col gap-2" id="boilerCatalog">
+      <div class="boiler-catalog-container-header flex flex-row flex-wrap justify-center md:justify-between">
+        <h1>EXPLORE THE <span class="color-accent">ITEMS</span></h1>
+        <div class="boiler-carousel-buttons flex flex-row gap-3">
+          <div class="swiper-button-next"> </div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="boiler-catalog-carousel" id="boilerCatalogCarousel">
+        <div class="boiler-catalog-container flex flex-row flex-wrap gap-2 items-center justify-center"
+          id="boilerCatalogContainer">
+
+          <div id="serviceDetails" class="service-details flex flex-col gap-3">
+            <div class="service-filter-button flex flex-row flex-wrap gap-1">
+              <button class="robust-button-secondary active" data-category="natural-gas">Natural Gas</button>
+
+              <button class="robust-button-secondary" data-category="electric">Electric</button>
+
+
+
+            </div>
+            <div class="swiper-container" id="servicesCarousel">
+              <div class="swiper-wrapper" id="swiperWrapper">
+                <!-- Slides inserted dynamically by JS -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="boiler-types-section flex flex-col items-center justify-center gap-2" id="boilerTypes">
+      <h1>Boiler <span class="color-accent">Types</span></h1>
+      <div class="boiler-types-wrapper flex flex-col-reverse lg:flex-row  gap-1">
+
+        <div class="boiler-types-text">
+          <div class="boiler-text-item flex flex-col gap-1 active" data-type="combi">
+            <h1>COMBI BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Provide both central heating and instant hot water on demand without a separate hot water tank.</li>
+              <li>Compact and efficient, great for smaller homes.</li>
+              <li>Energy-efficient due to on-demand heating, which can reduce utility bills.</li>
+              <li>Requires less space compared to system or conventional boilers.</li>
+              <li>Simple installation and low maintenance.</li>
+              <li>Ideal for homes with limited space and fewer bathrooms.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="system">
+            <h1>SYSTEM BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Work with a separate hot water storage tank but don’t require a water feed tank in the loft.</li>
+              <li>Suitable for homes with multiple bathrooms needing a steady hot water supply.</li>
+              <li>Hot water stored in the tank is available instantly for use.</li>
+              <li>More complex installation than combi boilers but better for high water demand.</li>
+              <li>Offers good pressure and water flow throughout the home.</li>
+              <li>Requires space for the hot water cylinder but less than conventional boilers.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="conventional">
+            <h1>CONVENTIONAL BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Use a separate hot water cylinder and a cold water storage tank (usually in the loft).</li>
+              <li>Often found in older homes with traditional plumbing systems.</li>
+              <li>Reliable for homes with high hot water demand and multiple bathrooms.</li>
+              <li>Provides hot water to several taps simultaneously without pressure loss.</li>
+              <li>More complex and costly installation compared to combi and system boilers.</li>
+              <li>Requires more space due to the need for storage tanks.</li>
+              <li>Cold water tank needs regular maintenance to prevent contamination.</li>
+            </ul>
+          </div>
+
+          <div class="boiler-text-item flex flex-col gap-1" data-type="electric">
+            <h1>ELECTRIC BOILERS</h1>
+            <div class="underline-left"></div>
+            <ul>
+              <li>Use electricity instead of gas or oil to heat water.</li>
+              <li>Compact and ideal for properties without gas supply.</li>
+              <li>Quiet operation with minimal maintenance.</li>
+              <li>Easy to install and often used as secondary or backup heating.</li>
+              <li>Generally more expensive to run than gas boilers, but cleaner and greener if using renewable
+                electricity.</li>
+              <li>Suitable for small homes, flats, or where low heating demand is required.</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="boiler-types-images ">
+          <img src="./resources/boiler-types/combi-boiler.webp" alt="Combi Boilers" data-type="combi" class="active" />
+          <img src="./resources/boiler-types/system-boiler.webp" alt="System Boilers" data-type="system" />
+          <img src="./resources/boiler-types/conventional-boiler.webp" alt="Conventional Boilers"
+            data-type="conventional" />
+          <img src="./resources/boiler-types/electric-boiler.webp" alt="Electric Boilers" data-type="electric" />
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="join-us shake-effect">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1>Some call it extra. We call it <span class="color-accent">robust</span> ! </h1>
+        <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+  </main>
+
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+16047123899" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@robustplumbing.ca" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/16047123899?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services%21"
+        target="_blank" rel="noopener noreferrer" class="icon magenta">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </nav>
+  </div>
+  <footer class="footer-section flex flex-col md:flex-row ">
+
+    <section class="footer-info flex flex-col items-center justify-center">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <div class="footer-logo-image">
+        <img src="./resources/robust-logo-img-bg.webp" alt="">
+      </div>
+      <div class="footer-info-content-wrapper">
+        <div class="footer-info-content content-robust">
+          <h2>ROBUST</h2>
+          <h2>ROBUST</h2>
+
+        </div>
+        <div class="footer-info-content content-plumbing">
+          <h2>PLUMBING</h2>
+          <h2>PLUMBING</h2>
+        </div>
+      </div>
+
+    </section>
+
+
+   <section class="footer-subscribe">
+  <h1 id="subHeading">Reach Out <span class="color-accent">Today!</span></h1>
+  <form class="subscribe-form flex flex-col gap-1" onsubmit="handleSubscribe(event)" >
+    <p id="subText">Skip the wait — tell us what you need!</p>
+
+    <input type="email" id="subEmail" class="subscribe-input" name="email" placeholder="Enter your email" required />
+    <button class="robust-button-primary" type="submit">Subscribe</button>
+  </form>
+
+  <div class="sub-success" id="subSuccess" >
+    <h1>Thank <span  class="color-accent">you!</span></h1>
+    <p>Thanks for subscribing! Discover our boiler solutions in the meantime.</p>
+    <button class="robust-button-primary go-to-boiler" href="./boilers.html">Boiler Services</button>
+  </div>
+
+  <div class="sub-fail" id="subFail">
+    <p class="color-accent">Oops!</p>
+    <p>Please try again.</p>
+  </div>
+</section>
+
+  </footer>
+    <div class="footer-copyright flex flex-row justify-center" id="footerCopyright">
+</div>
+</body>
+
+</html>
