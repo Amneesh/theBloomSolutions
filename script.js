@@ -433,37 +433,37 @@ toggleBtn1.addEventListener('click', () => {
 //     '#8B0000'
 //   ];
 
-//   document.addEventListener("DOMContentLoaded", () => {
-//     function counter(id, start, end, duration) {
-//       let obj = document.getElementById(id),
-//         current = start,
-//         range = end - start,
-//         increment = end > start ? 1 : -1,
-//         step = Math.abs(Math.floor(duration / range));
+  document.addEventListener("DOMContentLoaded", () => {
+    function counter(id, start, end, duration) {
+      let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range));
 
-//       const timer = setInterval(() => {
-//         current += increment;
-//         obj.textContent = current + ' +';
-//         if (current === end) clearInterval(timer);
-//       }, step);
-//     }
+      const timer = setInterval(() => {
+        current += increment;
+        obj.textContent = current + ' +';
+        if (current === end) clearInterval(timer);
+      }, step);
+    }
 
-//     let hasAnimated = false;
+    let hasAnimated = false;
 
-//     const observer = new IntersectionObserver(entries => {
-//       entries.forEach(entry => {
-//         if (entry.isIntersecting && !hasAnimated) {
-//           hasAnimated = true;
-//           counter("count1", 0, 400, 3000);
-//           counter("count2", 100, 50, 2500);
-//           counter("count3", 0, 40, 3000);
-//           // counter("count4", 0, 40, 3000);
-//         }
-//       });
-//     }, { threshold: 0.5 });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          counter("count1", 0, 400, 3000);
+          counter("count2", 100, 50, 2500);
+          counter("count3", 0, 40, 3000);
+          // counter("count4", 0, 40, 3000);
+        }
+      });
+    }, { threshold: 0.5 });
 
-//     observer.observe(document.getElementById('whoWeAre'));
-//   });
+    observer.observe(document.getElementById('whoWeAre'));
+  });
 
 //   function truncateWords(str, limit) {
 //     const words = str.split(' ');

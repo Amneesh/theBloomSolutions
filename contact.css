@@ -1,17 +1,22 @@
+.contact-main-wrapper {
+  position: relative;
+
+}
+
 /* Section setup */
 .contact-section {
   position: relative;
-
-  padding: 5rem 2rem;
-
+  padding: 10rem 2rem;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100vw;
   align-items: center;
-  background-color: var(--color-secondary);
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.39);
   color: var(--color-text);
-
 }
+
 
 /* .contact-section::before {
   content: "";
@@ -25,23 +30,29 @@
   opacity: 0.3;
   filter: brightness(0.3) contrast(1.2);
 } */
+
 .contact-info {
+ 
   position: relative;
-  z-index: 1;
+  z-index: 10;
   max-width: 600px;
+  color: var(--color-accent-light);
 }
+
 .contact-info-wrapper {
   width: 100%;
 
   a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-accent-light);
   }
 }
+
 .contact-info-subwrapper {
   min-width: 120px;
   width: 100%;
   max-width: 280px;
+
   i {
     width: 50px;
     display: flex;
@@ -53,21 +64,24 @@
     border-radius: 50%;
     color: var(--primary-white-color) !important;
   }
-  span{
-    font-size:15px;
+
+  span {
+    font-size: 15px;
   }
 }
+
 .social-icons {
-a{
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
+
   i {
     width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-   
+
     background-color: var(--color-accent-dark);
     padding: 5px;
     border-radius: 50%;
@@ -76,12 +90,12 @@ a{
 }
 
 .contact-form {
-      width: 100%;
-    min-height: 550px;
+  width: 100%;
+  min-height: 550px;
   max-width: 500px;
 
   position: relative;
-  z-index: 1;
+  z-index: 10;
   min-width: 200px;
   padding: 2rem;
 
@@ -89,6 +103,7 @@ a{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   backdrop-filter: blur(50px);
 }
+
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
@@ -117,9 +132,10 @@ form textarea:focus {
   border-color: var(--color-accent);
 }
 
-#contactFormSuccessHeading{
+#contactFormSuccessHeading {
   display: none;
 }
+
 #form-status-success {
   display: none;
   justify-content: space-around;
@@ -127,6 +143,7 @@ form textarea:focus {
   flex-flow: column;
   gap: 2rem;
 }
+
 #form-status-fail {
   display: none;
 }
@@ -144,39 +161,77 @@ form textarea:focus {
 }
 
 .contact-map {
- overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+   width: 100vw;
+   z-index: 1;
+  
   iframe {
 
     width: 100vw;
-     object-position: top;
-  height: 40vh;
+    object-position: top;
+    height: 300px;
     transition: all 1s ease-in-out;
+    filter: invert(90%) hue-rotate(140deg) saturate(500%) contrast(100%);
+  
+
   }
 }
-iframe:hover{
+
+iframe:hover {
   transform: scale(1.1);
 
 }
+@media only screen and (min-width:768px){
+  .contact-map {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+   width: 50%;
+   z-index: 1;
+    height: 50%;
+    clip-path: polygon(
+    0 0,     /* top-left */
+    85% 0,   /* top-right before arrow tip */
+    100% 50%,/* arrow tip */
+    85% 100%,/* bottom-right before arrow tip */
+    0 100%   /* bottom-left */
+  );
+  iframe {
 
+    width: 100vw;
+    object-position: top;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    filter: invert(90%) hue-rotate(140deg) saturate(500%) contrast(100%);
+  
+
+  }
+}
+
+}
 
 /* buildings */
 
 
-  .buildings {
-    background-color: var(--color-secondary);
-   position: relative;
-    height: 50vh;
-    background-image: url('./resources/world-map-isolated.webp');
-    background-repeat: repeat-x;
-    background-size: cover;
-    will-change: background-position;
-  }
-
-
-@media screen and (min-width:768px){
 .buildings {
-  background-repeat: no-repeat;
-   background-size: contain;
+  background-color: var(--color-secondary);
+  position: relative;
+  height: 50vh;
+  background-image: url('./resources/world-map-isolated.webp');
+  background-repeat: repeat-x;
+  background-size: cover;
+  will-change: background-position;
+}
+
+
+@media screen and (min-width:768px) {
+  .buildings {
+    background-repeat: no-repeat;
+    background-size: contain;
     background-attachment: fixed;
   }
 }
@@ -217,21 +272,25 @@ iframe:hover{
   display: flex;
   flex-direction: column;
   gap: 15px;
+
   h1 {
     padding: 2rem 0rem 0rem;
   }
 }
-.faq-wrapper{
+
+.faq-wrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
-.faq-image{
+
+.faq-image {
   max-width: 500px;
   min-width: 200px;
 
 
 }
-.faq-card-container{
+
+.faq-card-container {
   width: 100%;
   max-width: 800px;
 }
@@ -289,7 +348,7 @@ iframe:hover{
 
 .faq-content p {
   margin: 0;
-  
+
   color: var(--color-text);
 
 }

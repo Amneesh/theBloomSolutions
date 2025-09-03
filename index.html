@@ -7,6 +7,7 @@
   <title>The bloom solutions</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./flex.css" />
+  <link rel="stylesheet" href="./contact.css" />
 
   <link rel="stylesheet" href="./particle.css">
   <link rel="icon" href="/resources/robust-logo-img-bg.webp" type="image/webp" />
@@ -99,7 +100,7 @@
 
 
 
-      <div class="overlay animate-slide-right flex flex-col justify-center items-center">
+      <div class="overlay animate-slide-right flex flex-col justify-center items-center gap-4">
         <div class="overlay-main flex flex-col md:flex-row  items-center justify-evenly  row-gap-2">
           <div class="hero-content flex flex-col items-start justify-center hero-content-left">
             <div class="hero-content-heading-left">
@@ -130,16 +131,15 @@
 
         <div class="overlay-header">
           <div class="bloom-desktop-header">
-            <div class="bloom-tabs">
+            <div class="tabs">
               <input checked="" value="HTML" name="fav_language" id="html" type="radio" class="input" />
               <label for="html" class="label">HTML</label>
               <input value="CSS" name="fav_language" id="css" type="radio" class="input" />
               <label for="css" class="label">CSS</label>
               <input value="JavaScript" name="fav_language" id="javascript" type="radio" class="input" />
               <label for="javascript" class="label">JavaScript</label>
-
-              <input value="JavaScript" name="fav_language" id="javascript1" type="radio" class="input" />
-              <label for="javascript1" class="label">JavaScript1</label>
+              <input value="JavaScript1" name="fav_language" id="javascript1" type="radio" class="input" />
+              <label for="javascript1" class="label">JavaScript</label>
             </div>
           </div>
 
@@ -169,9 +169,8 @@
           <h1 class="animate-slide-right" data-delay="0.3s"><span class="color-accent">Who</span> We Are</h1>
           <div class="underline-left"></div>
           <p>
-            At <span class="color-primary big-text">The bloom solutions</span>, we bring strength, reliability, and
-            precision to every job we do. With a commitment to top-tier craftsmanship and customer satisfaction, we
-            provide professional plumbing solutions built to last. Whether it’s residential, commercial, or emergency
+            At <span class="big-text">The bloom solutions</span>, we bring strength, reliability, and
+            precision to every job we do. Whether it’s residential, commercial, or emergency
             service, our team delivers results you can trust — every time.
           </p>
           <p>
@@ -207,7 +206,16 @@
 
     </section>
 
-    <section class="features flex justify-evenly flex-col items-center gap-5" id="features">
+    <!-- <section class="services">
+      <h1>Services we provide</h1>
+      <div class="services-data">
+
+      </div>
+      <div class="services-data-icons">
+        
+      </div>
+    </section> -->
+    <!-- <section class="features flex justify-evenly flex-col items-center gap-5" id="features">
       <h1 class="visually-hidden">Our Features</h1>
 
       <div class="feature-header flex flex-col gap-1">
@@ -264,9 +272,9 @@
           <button class="robust-button-secondary go-to-contact">GET A QUOTE</button>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
+    <!-- <section class="services-vertical flex flex-col gap-2 justify-center items-center" id="services">
       <h1>OUR <span class="color-accent">SERVICES</span> </h1>
       <div class="underline"></div>
       <div class="slider ">
@@ -440,11 +448,11 @@
 
 
 
-    </section>
+    </section> -->
 
 
 
-    <section class="testimonial-section flex flex-col  justify-start items-end" id="googleReviews">
+    <!-- <section class="testimonial-section flex flex-col  justify-start items-end" id="googleReviews">
       <h1 class="visually-hidden">What our <span class="color-accent">Clients</span> say!</h1>
       <button class="robust-button-secondary testimonial-button"
         onclick="window.open('https://www.google.com/search?sca_esv=bf242ef3a2c390d8&rlz=1C1ONGR_enCA1103CA1103&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8T3JfOQpBH5pIRynCMspyEwJN6NVQy4Dfnlgq_Ti3kmglwQHuLoCjyvXOTEz2DuSeSMSb8SaU4MXk7F2Iccuor5gvS_tpQB8HGGzzkSeKd74mUMjRhYcWgjQSvSPIynISVaMPs%3D&q=Robust+Plumbing+%26+Drain+Services+Reviews&sa=X&ved=2ahUKEwiQ6sKo1oOPAxWyvokEHVu2KVEQ0bkNegQIHhAE&biw=1728&bih=930&dpr=1#lrd=0x5485cf2388963ca5:0xafeb7792919ccc25,3,,,,', '_blank')">LEAVE
@@ -459,9 +467,215 @@
         </div>
       </div>
 
+    </section> -->
+
+
+    <section class="contact-main-wrapper">
+
+
+      <div
+        class="contact-section flex flex flex-col md:flex-row  sm:justify-around items-start row-gap-3 sm:column-gap-2 items-center">
+        <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
+          <div class="contact-header flex flex-col gap-25">
+            <h2 id="contactFormHeading">Get in touch </h2>
+            <h2 id="contactFormSuccessHeading">Thank You </h2>
+            <div class="underline-left"></div>
+          </div>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+            <button type="submit" class="robust-button-secondary">Send Message</button>
+          </form>
+          <div id="form-status-success" class="flex flex-col gap-2">
+            <div class="text-message">
+              <p>
+                Thank you for reaching out.</p>
+              <p>We’ll be in touch with you
+                shortly !</p>
+              <p>
+                Meanwhile you can explore our portfolio !</p>
+            </div>
+
+            <button class="robust-button-secondary open-portfolio go-to-portfolio">
+              Watch portfolio
+            </button>
+          </div>
+          <div id="form-status-fail" style="margin-top: 10px">
+            <p>
+              <i class="fa fa-warning"></i>
+              Oops! Something went wrong. Please try again later or
+              contact support if the issue persists
+            </p>
+          </div>
+        </div>
+
+              <div class=" contact-map contact-page flex justify-center items-center ">
+
+        <h1 class="visually-hidden">robust map</h1>
+
+
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.717364451028!2d-122.67567882299998!3d49.09201097136485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485cf2388963ca5%3A0xafeb7792919ccc25!2sRobust%20Plumbing%20%26%20Drain%20Services!5e0!3m2!1sen!2sca!4v1754934833546!5m2!1sen!2sca"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  
+          <div class="contact-info flex flex-col row-gap-2">
+            <h1>Contact Our<span class="color-accent"> Plumbing </span>Experts</h1>
+            <h5>
+              Need urgent plumbing help? We’re ready 24/7 — call or message now!
+            </h5>
+            <div class="contact-info-wrapper flex flex-row flex-wrap justify-between items-start gap-2">
+              <div class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right">
+                <!-- <img src="" alt="" /> -->
+                <i class="fa-solid fa-phone"></i>
+                <div class="contact-info-container flex flex-col gap-50">
+                  <h5>LET'S TALK</h5>
+                  <a href="tel:+17788610450" class="flex flex-col">+1 (604) 712-3899 <span class="color-primary"> - Shawn
+                      Gill</span></a>
+                  <!-- <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> -
+                    Parminder Singh</span></a> -->
+                </div>
+              </div>
+              <a href="linkto:info@robustplumbing.ca"
+                class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+                <!-- <img src="" alt="" /> -->
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="contact-info-container flex flex-col gap-50">
+                  <h5>HEAD OFFICE</h5>
+                  <p>8065D 133 street, Surrey, BC </p>
+                </div>
+              </a>
+              <a href="mailto:robust.surrey@gmail.com"
+                class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right ">
+                <!-- <img src="" alt="" /> -->
+                <i class="fa-solid fa-envelope"></i>
+                <div class="contact-info-container flex flex-col gap-50">
+                  <h5>EMAIL US</h5>
+                  <p>robust.surrey@gmail.com</p>
+                </div>
+              </a>
+              <a href="linkto:info@robustplumbing.ca"
+                class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+                <!-- <img src="" alt="" /> -->
+                <i class="fa-solid fa-clock"></i>
+                <div class="contact-info-container flex flex-col gap-50">
+                  <h5>WORKING HOURS</h5>
+                  <p>Monday - Friday</p>
+                  <p>07-09</p>
+                </div>
+              </a>
+            </div>
+            <div class="underline-left"></div>
+            <div class="social-icons flex flex-col gap-1">
+              <h4>FOLLOW US ON SOCIAL MEDIA</h4>
+              <div class="footer-social-media-icons">
+                <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+                  target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/robust0450robust/" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/robust.sound/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.instagram.com/robust_bhangra/" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+
+      <!-- <div class="faq-section flex flex-col gap-1 " id="faqs">
+
+        <h1><span class="color-accent">Questions ? </span> We’ve Got Answers!</h1>
+        <div class="underline-left"></div>
+        <div
+          class="faq-wrapper flex flex flex-col-reverse lg:flex-row  sm:justify-center items-star sm:column-gap-2 items-end ">
+          <div class="faq-container flex flex-col gap-2">
+
+            <div class="faq-card-container flex flex-col gap-1">
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">What plumbing services do you offer?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>We provide a wide range of plumbing services including leak repairs, water heater installation and
+                    replacement, drain cleaning, pipe repairs, and emergency plumbing services for both residential and
+                    commercial clients.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">Do you offer emergency plumbing services?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>Yes, we offer 24/7 emergency plumbing services. Our team is available to respond quickly to urgent
+                    issues such as burst pipes, major leaks, or water damage emergencies.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">How do I schedule a service?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>You can schedule a service by calling us directly, sending an email, or filling out our online
+                    booking form. We recommend booking in advance to ensure availability, though we do accommodate
+                    urgent requests.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">Do you provide free estimates?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>Yes, we provide free estimates for most plumbing services. A member of our team will assess the
+                    work required and give you a transparent, upfront quote before starting any job.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">Are your plumbers licensed and insured?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>Absolutely. All our plumbers are fully licensed, insured, and trained to deliver high-quality
+                    workmanship safely and efficiently.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>We primarily serve the Greater Vancouver Area and surrounding communities. For locations outside
+                    this area, please contact us to see if we can accommodate your request.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">What payment methods do you accept?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>We accept cash, major credit cards, debit, and e-transfers. Payment terms will be discussed during
+                    the booking process, and deposits may be required for larger jobs.</p>
+                </div>
+              </div>
+              <div class="faq-card animate-slide-down">
+                <button class="faq-toggle">Do you offer warranties on your work?<span class="icon">+</span></button>
+                <div class="faq-content">
+                  <p>Yes, all our services come with a workmanship warranty. For products like water heaters or faucets,
+                    manufacturer warranties also apply. Details will be provided with each service.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="faq-image">
+            <img src="./resources/plumber-faq.webp" alt="">
+          </div>
+        </div>
+      </div> -->
     </section>
-
-
 
   </main>
 
