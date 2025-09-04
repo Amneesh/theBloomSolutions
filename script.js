@@ -1,7 +1,8 @@
 const sections = document.querySelectorAll("main > section");
 let isScrolling = false;
-
 let currentSection = 0;
+
+// Desktop scroll (wheel)
 window.addEventListener("wheel", (e) => {
   if (isScrolling) return;
   isScrolling = true;
@@ -16,9 +17,39 @@ window.addEventListener("wheel", (e) => {
 
   setTimeout(() => {
     isScrolling = false;
-  }, 800); // lock time between scrolls
+  }, 800);
 });
 
+// Mobile scroll (touch)
+let startY = 0;
+
+window.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchend", (e) => {
+  if (isScrolling) return;
+  let endY = e.changedTouches[0].clientY;
+  let deltaY = startY - endY;
+
+  if (Math.abs(deltaY) > 50) { // swipe threshold
+    isScrolling = true;
+
+    if (deltaY > 0) {
+      // swipe up
+      currentSection = Math.min(currentSection + 1, sections.length - 1);
+    } else {
+      // swipe down
+      currentSection = Math.max(currentSection - 1, 0);
+    }
+
+    sections[currentSection].scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => {
+      isScrolling = false;
+    }, 800);
+  }
+});
 
 const serviceSections = document.querySelectorAll(".service-container");
 
