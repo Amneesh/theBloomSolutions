@@ -19,47 +19,6 @@ const observer = new IntersectionObserver(
 serviceSections.forEach((section) => observer.observe(section));
 
 
-// window.addEventListener("load", () => {
-//   document.body.classList.add("loaded");
-// });
-// const track = document.getElementById("promo-track");
-
-// async function fetchPromoLines(sheetId, sheetName = 'Sheet1') {
-//   const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?sheet=${sheetName}&tq=select%20*`;
-//   try {
-//     const response = await fetch(sheetUrl);
-//     const textData = await response.text();
-
-//     const jsonData = JSON.parse(textData.substring(textData.indexOf('{'), textData.lastIndexOf('}') + 1));
-//     const rows = jsonData.table.rows;
-
-//     // Clear previous content
-//     track.innerHTML = '';
-
-//     // Create promo items
-//     rows.forEach(row => {
-//       const promoText = row.c[0]?.v || '';
-
-//       const p = document.createElement('p');
-//       p.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${promoText}`;
-//       track.appendChild(p);
-//     });
-
-//     // Duplicate the content for infinite loop effect
-//     const clone = track.innerHTML;
-//     track.innerHTML += clone;
-
-//     // Add animation class to start scrolling
-//     track.classList.add('scrolling');
-
-//   } catch (error) {
-//     console.error('Error fetching promo lines:', error);
-//   }
-// }
-
-// // Call with your Sheet ID and sheet name
-// fetchPromoLines('1CKPqUcDt1Y-fZTMopPFhffEa5Gr3GM8hJybsk0Jo_9w', 'promotions');
-
 
 
 
@@ -87,6 +46,19 @@ toggleBtn1.addEventListener('click', () => {
   }
 });
 
+document.addEventListener("click", (e) => {
+  const linkEl = e.target.closest(".go-to-link");
+  if (linkEl && linkEl.dataset.target) {
+    const url = linkEl.dataset.target;
+    const openInNewTab = linkEl.dataset.newtab === "true";
+
+    if (openInNewTab) {
+      window.open(url, "_blank");
+    } else {
+      window.location.href = url;
+    }
+  }
+});
 
 // const toggleBtn = document.getElementById('toggleSocial');
 // const socialPopup = document.getElementById('socialPopup');

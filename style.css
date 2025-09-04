@@ -79,7 +79,7 @@ main {
 main > section {
 
   min-height: 100vh !important; /* allows taller sections */
-  padding-bottom: 50px; /* optional spacing */
+
   height: auto;
     position: relative;
     z-index: 9999;
