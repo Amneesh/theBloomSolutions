@@ -75,12 +75,17 @@ html, body {
   width: 100vw;
   overflow-x: hidden;
    scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity; /* 'proximity' allows tall content to scroll fully */
+  overflow-y: scroll;
+  height: 100vh;
+
 }
 
 .page-wrapper > section {
   flex: 0 0 100%;
-  height: 100vh !important;
+  min-height: 100vh !important; /* allows taller sections */
+  padding-bottom: 50px; /* optional spacing */
+  height: auto;
   scroll-snap-align: start;
 }
 body.loaded {
@@ -655,131 +660,7 @@ p{
   }
 }
 
-/* desktop header */
-.bloom-desktop-header{
 
-  --radius: 8px;
-  --border: 4px;
-  --height: 48px;
-  --speed: 0.25s;
-  display: grid;
-  place-items: center;
-  align-content: center;
-}
-
-.tabs {
-  height: var(--height);
-  display: grid;
-  grid-auto-flow: column;
-  background: var(--color-accent-light);
-  color: var(--color-quaternary-dark);
-  border-radius: var(--radius);
-  grid-auto-columns: 1fr;
-  position: relative;
-  border: var(--border) solid var(--color-accent-light);
-}
-
-.tabs {
-  --ease: linear(
-    0,
-    0.1641 3.52%,
-    0.311 7.18%,
-    0.4413 10.99%,
-    0.5553 14.96%,
-    0.6539 19.12%,
-    0.738 23.5%,
-    0.8086 28.15%,
-    0.8662 33.12%,
-    0.9078 37.92%,
-    0.9405 43.12%,
-    0.965 48.84%,
-    0.9821 55.28%,
-    0.992 61.97%,
-    0.9976 70.09%,
-    1
-  );
-}
-
-.tabs > .input,
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.tabs:has(:checked:nth-of-type(1)) {
-  --active: 0;
-}
-.tabs:has(:checked:nth-of-type(2)) {
-  --active: 1;
-}
-.tabs:has(:checked:nth-of-type(3)) {
-  --active: 2;
-}
-.tabs:has(:checked:nth-of-type(4)) {
-  --active: 3;
-}
-
-.tabs :checked + .label {
-  --highlight: 1;
-}
-
-.tabs:has(.input:nth-of-type(2)) {
-  --count: 2;
-}
-.tabs:has(.input:nth-of-type(3)) {
-  --count: 3;
-}
-.tabs:has(.input:nth-of-type(4)) {
-  --count: 4;
-}
-
-.tabs .label {
-  padding: 0 clamp(10px, 10px + 10px, 20px);
-  cursor: pointer;
-  text-align: center;
-  height: 100%;
-  display: grid;
-  border-radius: calc(var(--radius) - var(--border));
-  place-items: center;
-  color: var(--color-quaternary-dark);
-  transition: background, color;
-  transition-duration: 0.25s;
-  transition-timing-function: var(--ease, ease);
-}
-
-.input:not(:checked) + .label:hover {
-  --highlight: 0.35;
-  background: var(--color-primary-dark);
-}
-
-.tabs::after {
-  pointer-events: none;
-  content: "";
-  width: calc(100% / var(--count));
-  height: 100%;
-  background: #002b2975;
-  position: absolute;
-  border-radius: calc(var(--radius) - var(--border));
-  translate: calc(var(--active, 0) * 100%) 0;
-  transition: translate, outline-color;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--ease, ease);
-  outline: 2px solid transparent;
-}
-
-.tabs:has(:focus-visible)::after {
-  outline-color: red;
-}
-
-
-/*  desktop jheader */
 /* who-we-ar */
 
 .who-we-are {
