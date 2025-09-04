@@ -69,10 +69,10 @@ overflow-x: hidden;
 }
 
 main {
-  
+
   min-height: 100vh;
   height: auto;
-  
+
 
 }
 
@@ -310,7 +310,7 @@ i {
 .modal-content h1 {
   margin-bottom: 1rem;
   color: var(--color-navy);
- 
+
 }
 
 .modal-content p {
@@ -344,7 +344,7 @@ i {
     font-size: clamp(16px, 4vw, 18px);
   }
 } */
-/* 
+/*
 @keyframes scrollText {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -371,7 +371,7 @@ i {
   width: 100px;
   height: auto;
 
-  
+
 }
 
 
@@ -475,9 +475,9 @@ background-color: var(--color-accent-dark);
 
 #slide-menu ul {
   list-style: none;
-  
+
   text-align: left;
-  
+
 }
 
 
@@ -611,7 +611,7 @@ padding-top: 10rem;
 
 .hero-content-heading-left{
      max-width: 500px;
-      
+
      h1{
       font-size: clamp(50px, 6vw, 100px);
      }
@@ -665,6 +665,28 @@ p{
   }
 }
 
+/* why-us */
+.why-us-section{
+  width: 100%;
+  padding: 2rem;
+}
+.why-us-text{
+  color: var(--color-accent-light);
+  max-width: 600px;
+}
+.shifted{
+  margin-left:50px;
+  margin-top: 80px;
+}
+.why-us-icons{
+
+  img{
+    width: 100px;
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(160deg) saturate(400%) contrast(0.9) invert(1);
+  }
+}
+/* why-us-end */
+
 
 /* who-we-ar */
 
@@ -695,7 +717,7 @@ width: 100%;
 }
 
 .text-side p {
-  
+
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -846,14 +868,14 @@ color: var(--color-accent-dark);
 .feature-circle-wrapper {
  width: 100%;
  padding: 2rem ;
-  
+
 }
 .feature-circle-container{
   position: relative;
   width: 250px;
   height: 250px;
    margin: auto;
- 
+
 
 }
 .feature-circle-container::before {
@@ -898,7 +920,7 @@ margin: 3rem 0rem 0rem 0rem;
 }
 
 .feature {
- 
+
   background-color: var(--color-accent-dark);
   color: var(--primary-white-color);
   width: 100px;
@@ -1003,7 +1025,7 @@ h1{
 
 @media only screen and (min-width:768px){
   .feature-content-data{
-  
+
    margin:  -2rem auto 0rem;
 
 }
@@ -1153,11 +1175,11 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", en
   scroll-snap-align: start;
   scroll-snap-stop: always;
   min-height: auto;
-  
+
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
- 
+
 }
 
 .slide:nth-child(even) {
@@ -1183,7 +1205,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", en
 
 .inner_content_data{
 
- 
+
   position: absolute;
   top: 0;
   z-index: 2;
@@ -1416,7 +1438,7 @@ top: 15%;
   min-width: 200px;
 }
 .footer-info-content-wrapper {
- 
+
   position: relative;
   max-width: 500px;
   width: 100%;
@@ -1585,7 +1607,7 @@ top: 0;
   width: 100%;
   padding: 20px 30px;
   font-size: clamp(16px, 4vw, 18px);
- 
+
    border: 1px solid var(--color-primary);
   border-radius: 0;
 
