@@ -1,13 +1,18 @@
 .service-section{
+
+    padding: 5rem 1rem;
     position: relative;
     z-index: 1;
-    padding: 2rem;
-
-    max-width: 100vw;
- overflow-x: hidden;
     
 }
+.service-section-heading{
+    position: relative;
+   h1{
+color: var(--color-accent-light);
+   } 
+}
 .service-quote{
+     position: relative;
     width: 100%;
 }
 .service-quote-text{
@@ -62,7 +67,11 @@
 }
 
 .screen-text {
+overflow: hidden;
 
+img{
+    border-radius: 10px 10px 0px 0px;
+}
 }
 .screen-header {
   width: 100px;

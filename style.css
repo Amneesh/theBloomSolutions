@@ -65,28 +65,24 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* Hide vertical scroll */
+overflow-x: hidden;
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-   scroll-behavior: smooth;
-  scroll-snap-type: x proximity; /* 'proximity' allows tall content to scroll fully */
-  overflow-y: scroll;
-  height: 100vh;
+main {
+  
+  min-height: 100vh;
+  height: auto;
+  
 
 }
 
-.page-wrapper > section {
-  flex: 0 0 100%;
+main > section {
+
   min-height: 100vh !important; /* allows taller sections */
   padding-bottom: 50px; /* optional spacing */
   height: auto;
-  scroll-snap-align: start;
+    position: relative;
+    z-index: 9999;
 }
 body.loaded {
   visibility: visible;
@@ -358,7 +354,7 @@ i {
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  background-color: rgba(0, 0, 0, 0.548);
+  /* background-color: rgba(0, 0, 0, 0.548); */
   justify-content: space-between;
 }
 
