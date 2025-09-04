@@ -20,6 +20,25 @@ window.addEventListener("wheel", (e) => {
 });
 
 
+const serviceSections = document.querySelectorAll(".service-container");
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const screen = entry.target.querySelector(".screen");
+        screen.classList.add("open-animation");
+        obs.unobserve(entry.target); // trigger only once per laptop
+      }
+    });
+  },
+  { threshold: 0.5 } // 50% visible before opening
+);
+
+// Observe each section
+serviceSections.forEach((section) => observer.observe(section));
+
+
 // window.addEventListener("load", () => {
 //   document.body.classList.add("loaded");
 // });
